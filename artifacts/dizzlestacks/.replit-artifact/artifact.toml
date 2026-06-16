@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Dizzlestacks"
+version = "1.0.0"
+id = "artifacts/dizzlestacks"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24693
+
+[services.development]
+run = "pnpm --filter @workspace/dizzlestacks run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dizzlestacks", "run", "build" ]
+publicDir = "artifacts/dizzlestacks/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24693"
+BASE_PATH = "/"
