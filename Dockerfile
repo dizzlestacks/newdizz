@@ -6,7 +6,6 @@ WORKDIR /app
 
 COPY package.json ./
 COPY artifacts/dizzlestacks/package.json ./artifacts/dizzlestacks/package.json
-COPY attached_assets ./attached_assets
 COPY artifacts/dizzlestacks ./artifacts/dizzlestacks
 COPY tsconfig.json ./tsconfig.json
 
