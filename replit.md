@@ -34,7 +34,7 @@ _Describe the high-level user-facing capabilities of this app once they exist._
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- **Always send full file contents** when making any code change — never just a diff or snippet. User copies and pastes complete files directly into their editor/GitHub.
 
 ## Gotchas
 
