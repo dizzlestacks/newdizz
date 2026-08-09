@@ -8,6 +8,7 @@ COPY package.json ./
 COPY artifacts/dizzlestacks/package.json ./artifacts/dizzlestacks/package.json
 COPY artifacts/dizzlestacks ./artifacts/dizzlestacks
 COPY tsconfig.json ./tsconfig.json
+COPY tsconfig.base.json ./tsconfig.base.json
 
 # Minimal workspace — exact catalog versions, no Replit NixOS binary exclusions
 RUN cat > pnpm-workspace.yaml << 'EOF'
